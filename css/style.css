@@ -1,0 +1,1123 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    position: fixed;/*Для липкого Меню*/
+    width: 100%;/*Для липкого Меню*/
+    height: 51px;
+    background-color: #212121;
+    z-index: 4;/*Для липкого Меню, накладывается поверх всех блоков*/
+    
+}
+
+button:hover {
+    background-image: none;
+    background-color:blue;
+
+
+}
+
+.header {
+    position: relative; /*для того чтобы прозрачный фон наложился на другой блок, этому другому блоку прописываем position absolut*/
+    height: 50px; /*Для липкого Меню*/
+}
+
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 70px;
+    margin: 0;
+    list-style-type: none; /*чтобы не было точек в маркированном списке*/
+}
+
+    
+.menu .menu_link {
+    font-size: 15px;
+    font-weight: 300;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu .menu_link:hover {
+    text-decoration: none;
+	color:  #81b4d6;
+}
+
+
+.menu .menu_item {
+    border-right: 2px dotted black; /*вертикальный разделитель*/
+    padding-right: 28px; /*вертикальный разделитель*/
+
+}
+
+.menu .menu_item:last-child { /*у последнего элемента меню не будет палочки*/
+    border-right: none;
+}
+
+.hamburger{
+    display: none;
+}
+
+.subheader {
+    position: absolute;
+    width: 100%;
+    height: 84px;
+    top: 51px; /*Для липкого Меню*/
+    background-color: rgba(0,0,0, .6); /*в данном случае мы установили для для данного фона прозрачность .6 -60 % прозрачности,  opasiti в данном случае не подходит, тюкю сделает прозрачность не только фону, но и другим элементам этого блока*/
+
+}
+
+.subheader .subheader_logo {
+    display: block; /*не забывать что картинка,ссылка -это не блочный элемент, если не установить этот параметр, то маржины не будут работать*/
+    max-width: 100%; /*если поменяется лого картинка, например будет больше, лого не уйдет за пределы блока*/
+    margin-top: 16px;
+}
+
+.subheader .subheader_official {
+    margin-top: 6px;
+    opacity: 0.5;
+    font-size: 13px;
+    font-weight: 400;
+    color: #ffffff;
+ }
+
+ .subheader .subheader_call{
+    text-align: right;
+    margin-top: 19px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #ffffff;
+ }
+
+ .subheader .subheader_phone{
+    display: block;
+    text-align: right;
+    margin-top: 8px;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 12px;
+    text-decoration: none;
+
+ }
+
+ .subheader .subheader_btn{
+    margin-top: 19px;
+    width: 172px;
+    height: 46px;
+    background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+    border: none;
+    border-radius: 4px;
+    box-shadow: inset 0 -3px 0px 0px rgba(0,0,0,0.12);
+    text-shadow: 1px 1px 0px 0px rgba(0,0,0,0.21);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+
+}
+
+
+
+.subheader .subheader_btn:hover {
+    background-image: none;
+    background-color:rgb(125, 184, 231);
+}
+
+
+.promo {
+    min-height: 800px;
+    background: url('../img/bg/first.jpg') center center/cover no-repeat;
+    padding: 150px 0 135px 0;
+
+
+}
+
+.promo .promo_header  {
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 60px;
+    margin: 0;
+    text-align: center;
+}
+
+.promo .promo_sabheader {
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 36px;
+    margin: 0;
+    margin: 22px;
+    text-align: center;
+}
+
+.promo p {
+    margin-top: 23px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    
+}
+
+.promo_btn {
+    display: block;
+    margin: 118px auto 0 auto;
+    width: 265px;
+    height: 69px;
+    background-image: linear-gradient(0.0deg, #1eacc7 0%, #4ce2ff 100%);
+    border: none;
+    border-radius: 4px;
+    box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.11);
+    box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.2);
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+
+}
+
+.promo_btn:hover {
+    background-image: none;
+    background-color:rgb(125, 184, 231);
+}
+
+
+.eggs {
+    padding: 71px 0 65px 0;
+    min-height: 900px;
+}
+
+.lable{
+
+    margin: 0 auto;
+    height: 24px;
+    width: 112px;
+    padding: 5px 12px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.subtitle{
+    margin-bottom: 0;
+    margin-top: 38px;
+    color: #222222;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subtitle_min {
+  margin-top: 18px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #222222;
+  text-align: center;
+
+}
+
+.eggs .eggs_item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 35px;
+}
+
+.eggs .eggs_item .eggs_round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26px;
+    width: 113px;
+    height: 113px;
+    background-color: #1eacc7;
+    border-radius: 100%;
+
+}
+
+.eggs .eggs_item .eggs_descr {
+    width: 343px;
+    
+}
+
+.eggs .eggs_item .eggs_descr .eggs_title {
+    line-height: 21px;
+    color: #1eacc7;
+    font-size: 17px;
+    font-weight: 400;
+
+}
+
+.eggs .eggs_item .eggs_descr .eggs_text {
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #202020;
+}
+
+.mobile {
+  min-height: 864px;
+  padding: 48px 0 79px 0;
+  background: url('../img/bg/squares.jpg') center center/cover no-repeat;
+}
+
+.mobile .row {
+    margin-top: 32px;
+}
+
+.mobile .mobile_item {
+    position: relative;
+    width: 320px;
+    height: 280px;
+    margin: 0 auto;
+    margin-bottom: 19px;
+    padding-top: 92px;
+    
+}
+
+.mobile .mobile_item_1{
+    background: url('../img/content/uber_order.jpg') center center/cover no-repeat;
+}
+
+.mobile .mobile_item_2{
+    background: url('../img/content/uber_innings.jpg') center center/cover no-repeat;
+}
+
+.mobile .mobile_item_3{
+    background: url('../img/content/uber_many.jpg') center center/cover no-repeat;
+}
+
+.mobile .mobile_item_4{
+    background: url('../img/content/uber_payment.jpg') center center/cover no-repeat;
+}
+
+.mobile .mobile_item_5{
+    background: url('../img/content/uber_feedback.jpg') center center/cover no-repeat;
+}
+
+.mobile .mobile_item_6{
+    background: url('../img/content/uber_cost.jpg') center center/cover no-repeat;
+}
+
+
+.mobile .mobile_item .mobile_item_subtitle {
+
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+}
+
+.mobile .mobile_item .mobile_item_plus {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: absolute;
+    bottom: 35px; /*чтобы плюсик при абсолютном позиционировании имел отступ снизу в 35 px */
+    left: 50%;  /*кружок с плюсиком встанет ровно по центру*/
+    transform: translateX(-50%);  /*кружок с плюсиком встанет ровно по центру*/
+    width: 26px;
+    height: 26px;
+    background-color: #000000;
+    margin: 0 auto;
+    border-radius: 100%;
+    padding: 6px;
+    cursor: pointer;
+    
+}
+ .mobile_item_plus:before{
+    content:'';
+    display: block;
+    width: 14px;
+    height: 2px;
+    background-color:  #ffffff;
+    transition: 0.3s;
+}
+
+.mobile_item_plus:after{
+    content:'';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 14px;
+    background-color:  #ffffff;
+    transition: 0.3s;
+
+}
+
+.mobile_item_plus:hover:before,.mobile_item_plus:hover:after{
+    background-color:blue;
+}
+
+
+.choice {
+    position: relative;
+    min-height: 896px;
+    padding: 56px 0 136px 0;
+    background: url('../img/bg/layers.png') center center/cover no-repeat;
+}
+
+.choice .choice_1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 499px;
+    width: 100%;
+    background-color: #070716;
+    z-index: 1;
+}
+
+.choice_text_hidden{
+    display: none;
+}
+
+.lable_white{
+    
+    margin: 56px auto;
+    height: 24px;
+    width: 112px;
+    padding: 5px 12px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subtitle_white{
+    margin-bottom: 0;
+    margin-top: 38px;
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subtitle_min_white {
+  margin-top: 18px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
+.choice img {
+    position: relative;
+    display: block;
+    margin: 230px auto 0 auto;
+    z-index: 2;
+}
+
+.choice_2_text {
+    
+    text-align: center;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #222222;
+    z-index: 2;
+
+}
+
+.require {
+    padding: 68px 0 84px 0;
+}
+
+.require .require_block{
+    margin:33px 0 ;
+}
+
+.require .require_block .require_block_nonemb {
+    margin-bottom: 0px; 
+}/*этот класс создаем, чтоб у нижних двух блоков не было нижних отступов*/
+
+.require_title_blue {
+    font-size: 22px;
+    font-weight: 400;
+    color: #1ca8c3;
+}
+
+.require_title_rose {
+    font-size: 22px;
+    font-weight: 400;
+    color: #ff5656;
+}
+
+.require_list {
+    margin-top: 22px;
+    list-style-type: none; /*убираем точки у маркированного списка*/
+    padding-left: 50px; /*по умолчанию стоят отступы слева, мы задаем свои значения*/
+
+    }
+
+li{
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #222222;
+    
+}
+
+.require_list_blue li:before {
+    content:'';
+    /* 1 вариант выровнять li элемент  display: inline-block; /*чтобы подействовало свойство, у li тоже устанавливаем inline-block???????*/
+    /*              vertical-align: middle;  /*выровнять повертикали элемент*/
+    /*              transform: translate(-5px , -1px); */ 
+
+    position: absolute;
+    display: block;
+    left: -32px; /*11-отступ, 21-размер картинки*/
+    top: 3px;
+
+    width: 21px;
+    height: 20px;
+    background: url('../icons/check_mark.png') center center/cover no-repeat;
+
+}
+
+.require_list_rose li:before {
+    content:'';
+    position: absolute;
+    display: block;
+    left: -32px;
+    top: 3px;
+    width: 21px;
+    height: 20px;
+    background: url('../icons/check_mark_red.png') center center/cover no-repeat;
+}
+
+.require_block_earnins{
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #1ca8c3;
+}
+
+.world{
+    position: relative;
+    min-height: 717px;
+    padding: 0 0;
+    background-color: #080816;;
+}
+
+.world_map{
+    display: block;
+    margin: 0 120px 0 120px;
+    padding: 46px 30px 46px 0;
+    min-height: 717px;
+    background: url('../img/footer img/maps.jpg') center center/cover no-repeat;
+    background-size: 100% 100%; /*Чтоб картинка пощалась полностью в контейнере*/
+    
+}
+
+.world .world_link{
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    bottom: 49px;
+    transform: translateX(-50%);
+    font-size: 15px;
+    line-height: 68px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #1fbad6;
+
+}
+.world_link {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer {
+    padding: 14px 23px 39px 23px;
+}
+	
+    
+footer a:hover {
+    text-decoration: none;
+}
+			
+.footer_divider{
+    width: 299px;
+    height: 4px;
+    background-color: #1fbad6;
+    margin: 0 auto;
+}
+
+
+.footer_wrapper{
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 32px;
+}
+
+
+.footer_wrapper > div {
+    width: 33%;
+}
+    
+
+.footer_wrapper > div:nth-child(3) {
+    display: flex; 
+    justify-content: flex-end;
+}
+
+
+.footer_social{
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_social_item {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 4px; 
+    width: 32px;
+    height: 32px;
+    background-color: #070716;
+    border-radius: 100%;
+    text-decoration: none;
+}
+
+
+.footer_social_item  i { 
+    color: #fff;
+} 
+   
+
+.footer_links{
+    width: 390px;
+    margin: 0 auto;
+}
+
+
+.footer_links_main {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.footer_links_main a {
+    color: #070716;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+} 
+
+
+.footer_links_sub {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+} 
+
+
+.footer_links_sub a {    
+    color: #999999;
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+
+.footer_links_lang {
+    display: block; 
+    margin: 0 auto;
+    color: #1fbad6;
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 19px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.footer_mobile a {
+    text-decoration: none;
+}
+
+.xs-visible{
+    display: none; /* второй телефон который пропадает при больших разрешениях, в меди а задаем дисплей блок*/
+}
+
+@media only screen
+
+
+and (max-width : 1200px) {/*992-1200*/
+
+    .menu .menu_item {
+        padding-right: 20px;
+
+    
+    }
+
+    .menu .menu_link {
+        font-size: 13px;
+
+    }
+
+    .promo .promo_header {
+        font-size: 50px;
+
+    }
+
+    .mobile .mobile_item {
+        width: 278px;
+        height: 278px;
+    }
+    .footer_links {
+        width: 326px;
+    }
+   
+}
+
+@media only screen
+
+
+and (max-width : 991px) { /*768-991*/
+
+    .menu .menu_item {
+        padding-right: 10px;
+    }
+
+    .menu .menu_link {
+        font-size: 10px;
+    }
+    
+    .sabheader_logo img {
+        width: 100%;
+    }
+    
+
+
+    .subheader .subheader_official{
+        font-size: 12px;
+    }
+    
+    .subheader .subheader_phone{
+        font-size: 17px;
+    }
+    
+
+    .subheader .subheader_btn {
+        width: 100%;
+        height: 34px;
+        margin-top: 25px;
+    }
+
+    
+    .mobile .mobile_item {
+        width: 220px;
+        height: 220px;
+    }
+
+    .mobile .mobile_item .mobile_item_subtitle {
+        font-size: 16px;
+    }
+        
+    .promo .promo_header {
+        font-size: 40px;
+    }
+
+    .promo .promo_sabheader{
+        font-size: 30px;
+    }
+
+    .eggs .eggs_item {
+        
+        align-items:center;
+        flex-direction: column; 
+
+    }
+
+    .eggs .eggs_item .eggs_descr .eggs_title {
+        margin-top: 20px;
+
+    }
+
+    .choice img {
+        width: 657px;
+    } 
+
+    .footer_links {
+        display: block;
+        margin: 0 auto;
+        width: 326px;
+        position: absolute;
+        
+    }
+
+    .footer_mobile a {
+        display: block;
+        margin-top: 5px;
+
+    }
+
+}
+
+@media only screen 
+
+and (max-width : 787px){ /*576-787*/
+    .menu { /*меню-гамбургер*/
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        top:0;
+        left: -100%;
+        right: 0;
+        width: 50%;
+        height: 100vh; /*на 100% видимого пространства на устройстве */
+        padding: 20px 15px;
+        background-color:rgba(0,0,0, .8);
+        transition: 0.6s all; /*выплывает меню за это время*/
+    }
+
+    .menu_active {
+        left: 0;
+    }
+
+    .menu_link {
+        font-style: 20px;
+    
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 50%; /*элемент по центру, вклчая собственный размер*/
+        transform: translateY(-50%);   /*элемент по центру, вклчая собственный размер*/
+        width: 26px;
+        height: 12px; /*добавляем высоту, чтобы корректно работал гамбургер (высота палочки*3 + margin *3)*/
+    }
+
+    .hamburger span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        margin-bottom: 2px;
+        transition: 0.5s all; /*время за которое появляется крестик*/
+       
+    }
+    
+    .hamburger_active span { /*крестик, который появляется во время открытия меню*/
+        margin-bottom: -2px;
+    }
+
+    .hamburger_active span:nth-child(1) {  /*крестик, который появляется во время открытия меню*/
+        transform: translateY(3px) rotate(-45deg); /*rotate(-45deg) это поворот */
+    }
+
+    .hamburger_active span:nth-child(2) { /*крестик, который появляется во время открытия меню*/
+        display: none;
+    }
+
+    .hamburger_active span:nth-child(3) { /*крестик, который появляется во время открытия меню*/
+        transform: translateY(3px) rotate(45deg);
+    }
+
+    .xs-hidden {
+        display: none;
+    }
+    .xs-visible {
+        display: block; /*для номера телефона который появляется при больших разрешениях, в общих настройках задаем дисплей нон*/
+        margin-top: 10px; 
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+
+    }
+    .subheader .subheader_btn{
+       display: block;
+        width: 200px;
+        height: 40px;
+        margin: 0 auto;
+        margin-top: 2px;
+    }
+
+    .subheader .subheader_btn:hover{
+        background-image: linear-gradient(0.0deg, #1eacc7 0%, #4ce2ff 100%);/*ux убираем hover на адаптивах*/
+    }
+    .promo_btn:hover{
+        background-image: linear-gradient(0.0deg, #1eacc7 0%, #4ce2ff 100%);/*ux убираем hover на адаптивах*/
+    }
+
+    .promo .promo_header {
+        line-height: 45px;
+    }
+
+    .menu .menu_item {
+        padding-right: 0;
+        border: none;
+        margin: 10px;
+       
+    }
+    .menu .menu_link {
+        font-size: 20px;
+    }
+
+    .eggs .eggs_item .eggs_round{
+        margin-right: 0;
+    }
+
+    .choice {
+        min-height: 600px;
+		padding: 40px 0;
+    }
+    .choice img {
+        max-width: 100%;
+        min-height: 247;
+        margin: 152px auto 25px auto;
+        
+    }
+
+    .lable_white {
+        margin: 24px auto;
+    }
+    .world_map {
+        margin: 0;
+    }
+    .subtitle_white, .subtitle_min_white {
+        
+    }
+    .footer_wrapper{
+        flex-wrap: wrap;
+    }
+        
+    .footer_wrapper > div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .footer_wrapper > div:nth-child(1){
+        width: 100%;
+    }
+            
+    .footer_wrapper > div:nth-child(3){
+        width: 100%;
+        justify-content: center;
+    }
+    .footer_mobile {
+        margin-top: 86px;
+    }
+
+    .footer_wrapper {
+        padding-top: 22px;
+
+    }
+
+}
+@media only screen 
+
+and (max-width : 575px){
+
+    nav {
+        height: 30px;
+    }
+
+    .subheader{
+        height: 60px;
+        top: 30px;
+    
+    }
+
+    .subheader_official{
+        display: none;
+    }
+    .subheader_logo {
+        margin-top: 16px;
+        width: 130px;
+        height: 15px;
+    }
+
+    .subheader_logo img {
+        width: 130px;
+    }
+    .xs-visible{
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-top: 11px;
+    }
+
+    .subheader .subheader_btn {
+        width: 110px;
+        height: 22px;
+        font-size: 10px;
+        margin-top: 7px;
+    }
+
+    .promo{
+        min-height: 400px;
+        padding: 123px 0 35px 0; /*+ 40 px к верху, т.к. на него накладывается нав бар*/
+    }
+    .promo p {
+        display: none;
+    }
+    
+    .promo_header{
+        font-size: 30px;
+        padding: 0 24px;
+        line-height: 35px;
+    }
+
+    .promo_sabheader {
+        font-size: 20px;
+        margin-top: 33px;
+        padding: 0 10px;
+        line-height: 30px;
+    }
+   .promo_btn{
+        width: 216px;
+        height: 56px;
+        margin-top: 72px;
+        
+   }
+   .menu{
+       width: 85%;
+    }
+    .menu .menu_item {
+        width: 100%;/*ux- для того чтоб ссылка занимала больше места, удобнее было попасть на нее в телефоне*/
+        text-align: center;
+    }/*ux- для того чтоб ссылка занимала больше места, удобнее было попасть на нее в телефоне*/
+
+    .menu_link {
+        display: block; /*ux- для того чтоб ссылка занимала всю строку, удобнее было попасть на нее в телефоне*/
+        padding: 18px; /*ux- для того чтоб ссылка занимала больше места, удобнее было попасть на нее в телефоне*/
+    }
+    
+    
+   .eggs{
+       padding: 22px 0 36px 0;
+    
+   }
+
+   .eggs .subtitle {
+       font-size: 16px;
+       margin-top: 16px;
+       line-height: 16px;
+      
+   }
+
+   .eggs .eggs_item{
+       margin-top: 26px;
+   }
+
+   .eggs .eggs_item .eggs_round{
+        width: 100px;
+        height: 100px;
+
+   }
+
+   .eggs .eggs_item .eggs_descr{
+       width: 100%;
+       margin-top: 27px;
+
+   }
+   .eggs .eggs_item .eggs_descr .eggs_title{
+       font-size: 16px;
+   }
+   .choice{
+        padding: 25px 0 33px 0;
+        min-height: 390px;
+        background: #000;
+   }
+
+   
+   .choice .subtitle_white, .choice .subtitle_min_white {
+       display: none;
+   }
+   .choice img{
+    margin: 34px auto 25px auto; 
+   }
+
+   .choice .choice_2_text{
+         display:none
+   }
+
+   .choice_text_hidden{
+        display: block;
+        margin-top: 326px;
+        font-size: 17px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #ffffff;
+        text-align: center;
+   }
+   .require{ 
+    margin-top: 15px;
+   }
+
+   .require .subtitle{
+        font-size: 16px;
+        font-weight: 700;
+
+   }
+   .require_list li{
+        font-size: 14px;
+        font-weight: 300;
+    }
+  
+
+   .require_title_blue{
+        font-size: 16px;
+        margin-top: 20px;
+   }
+   .require_title_rose{
+        font-size: 16px;
+        margin-top: 20px;
+   }
+
+   .world_map{
+        background-size:auto auto;
+   }
+    .footer_wrapper > div:nth-child(1){
+        order:2;
+    }
+        
+    .footer_wrapper > div:nth-child(2){
+        order:1;
+    }
+    .footer_wrapper > div:nth-child(3){
+        order:3;
+    } 
+    .footer_social{
+        margin-top: 93px;
+    }
+    .footer_mobile {
+        display:flex;
+        flex-direction:row;
+        margin-top: 16px;
+    }
+    .footer_mobile img{
+        padding: 0 5px 0 5px;
+
+    }
+}
